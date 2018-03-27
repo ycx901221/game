@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>test</title>
+  </head>
+  <body>
+
+    <script src="../utils.js"></script>
+    <script src="../Card.js"></script>
+    <script src="../Pack.js"></script>
+    <script src="../ddz.js"></script>
+    <script>
+      console.log(Card.get(Card.points.J, Card.suits.heart));
+
+      var pack = new Pack();
+
+      pack.toCards().forEach(function(card) {
+        console.log(card.toString());
+      });
+
+      pack.shuffle();
+      console.log('----');
+      pack.toCards().forEach(function(card) {
+        console.log(card.toString());
+      });
+
+      pack.sort();
+      console.log('----');
+      pack.toCards().forEach(function(card) {
+        console.log(card.toString());
+      });
+    </script>
+  </body>
+</html>
